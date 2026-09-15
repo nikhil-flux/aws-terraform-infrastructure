@@ -1,12 +1,13 @@
 **AWS Terraform Infrastructure**
 
-A modular, production-ready Terraform configuration for provisioning and managing AWS cloud infrastructure with best practices for scalability, security, and maintainability.
+	A modular, production-ready Terraform configuration for provisioning and managing AWS cloud infrastructure with best practices for scalability, security, and maintainability.
 
 **📋 Overview**
 
-This repository contains Infrastructure as Code (IaC) using Terraform to automate AWS resource provisioning. It’s designed for teams looking to deploy consistent, repeatable, and secure cloud infrastructure.
+	This repository contains Infrastructure as Code (IaC) using Terraform to automate AWS resource provisioning. It’s designed for teams looking to deploy consistent, 	repeatable, and secure cloud infrastructure.
 
 **🚀 Key Features**
+
 	•	Modular Architecture: Organized modules for VPC, EC2, RDS, S3, and more
 	•	Multi-Environment Support: Separate configurations for dev, staging, and production
 	•	State Management: Remote state storage with S3 and DynamoDB locking
@@ -16,21 +17,21 @@ This repository contains Infrastructure as Code (IaC) using Terraform to automat
 
 **📁 Project Structure**
 
-├── modules/
-│   ├── vpc/              # VPC, subnets, NAT gateways
-│   ├── ec2/              # EC2 instances and auto-scaling
-│   ├── rds/              # RDS database configurations
-│   ├── s3/               # S3 buckets and policies
-│   └── iam/              # IAM roles and policies
-├── environments/
-│   ├── dev/              # Development environment
-│   ├── staging/          # Staging environment
-│   └── prod/             # Production environment
-├── terraform.tfvars      # Variable definitions
-├── main.tf               # Root module configuration
-├── variables.tf          # Input variables
-├── outputs.tf            # Output values
-└── backend.tf            # Remote state configuration
+	├── modules/
+	│   ├── vpc/              # VPC, subnets, NAT gateways
+	│   ├── ec2/              # EC2 instances and auto-scaling
+	│   ├── rds/              # RDS database configurations
+	│   ├── s3/               # S3 buckets and policies
+	│   └── iam/              # IAM roles and policies
+	├── environments/
+	│   ├── dev/              # Development environment
+	│   ├── staging/          # Staging environment
+	│   └── prod/             # Production environment
+	├── terraform.tfvars      # Variable definitions
+	├── main.tf               # Root module configuration
+	├── variables.tf          # Input variables
+	├── outputs.tf            # Output values
+	└── backend.tf            # Remote state configuration
 
 **🔧 Prerequisites**
 
@@ -41,36 +42,36 @@ This repository contains Infrastructure as Code (IaC) using Terraform to automat
 
 **📦 Installation & Setup**
 
-1. Clone the Repository
-   git clone https://github.com/nikhil-flux/aws-terraform-infrastructure.git
-   cd aws-terraform-infrastructure
-2. Initialize Terraform
-   terraform init
-3. Configure AWS Credentials
-   aws configure
-4. Review and Customize Variables
-   # Copy and edit variables for your environment
+	1. Clone the Repository
+  	 git clone https://github.com/nikhil-flux/aws-terraform-infrastructure.git
+  	 cd aws-terraform-infrastructure
+	2. Initialize Terraform
+  	 terraform init
+	3. Configure AWS Credentials
+ 	  aws configure
+	4. Review and Customize Variables
+  	 # Copy and edit variables for your environment
        cp terraform.tfvars.example terraform.tfvars
-   # Edit terraform.tfvars with your values
+  	 # Edit terraform.tfvars with your values
 
 **🚢 Deployment**
 
-Plan Infrastructure Changes
-  terraform plan
-Apply Configuration
-  terraform apply
-Destroy Resources (Caution!)
-  terraform destroy
+	Plan Infrastructure Changes
+ 	 terraform plan
+	Apply Configuration
+	  terraform apply
+	Destroy Resources (Caution!)
+	  terraform destroy
 
 **📊 Modules Overview**
 
-  |Module |Purpose           |Key Resources                                |
-  |-------|------------------|---------------------------------------------|
-  |**VPC**|Network foundation|VPC, Subnets, Route Tables, NAT Gateway      |
-  |**EC2**|Compute resources |Instances, Security Groups, Key Pairs        |
-  |**RDS**|Database services |DB Instances, Subnet Groups, Parameter Groups|
-  |**S3** |Object storage    |Buckets, Policies, Versioning                |
-  |**IAM**|Access management |Roles, Policies, Users                       |
+	  |Module |Purpose           |Key Resources                                |
+	  |-------|------------------|---------------------------------------------|
+	  |**VPC**|Network foundation|VPC, Subnets, Route Tables, NAT Gateway      |
+ 	 |**EC2**|Compute resources |Instances, Security Groups, Key Pairs        |
+	  |**RDS**|Database services |DB Instances, Subnet Groups, Parameter Groups|
+	  |**S3** |Object storage    |Buckets, Policies, Versioning                |
+	  |**IAM**|Access management |Roles, Policies, Users                       |
 
 **🔒 Security Features**
 
@@ -83,12 +84,12 @@ Destroy Resources (Caution!)
 
 **📝 Variables & Outputs**
 
-Key Input Variables
-	•	aws_region: AWS region for deployment
-	•	environment: Environment name (dev/staging/prod)
-	•	instance_type: EC2 instance type
-	•	db_allocated_storage: RDS storage capacity
-	•	enable_monitoring: Enable CloudWatch monitoring
+	Key Input Variables
+		•	aws_region: AWS region for deployment
+		•	environment: Environment name (dev/staging/prod)
+		•	instance_type: EC2 instance type
+		•	db_allocated_storage: RDS storage capacity
+		•	enable_monitoring: Enable CloudWatch monitoring
 
 **Key Outputs**
 
@@ -99,10 +100,10 @@ Key Input Variables
 
 **🔄 CI/CD Integration**
 
-This project supports automated deployments via GitHub Actions:
-	•	Plan on pull requests
-	•	Apply on merge to main branch
-	•	Automatic state locking and management
+	This project supports automated deployments via GitHub Actions:
+		•	Plan on pull requests
+		•	Apply on merge to main branch
+		•	Automatic state locking and management
 
 **⚠️ Best Practices**
 
